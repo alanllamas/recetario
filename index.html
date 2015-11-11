@@ -33,9 +33,9 @@
 
 							<div class="form-group">
 
-								<label for="materia" class="col-lg-2 control-label">Producto</label>
+								<label for="materia" class="col-lg-3 control-label">Producto</label>
 
-								<div class="col-lg-10">
+								<div class="col-lg-9">
 
 									<input type="text" class="form-control" id="materia" placeholder="Producto">
 
@@ -45,9 +45,9 @@
 
 							<div class="form-group">
 
-								<label for="cantidad" class="col-lg-2 control-label">Cantidad</label>
+								<label for="cantidad" class="col-lg-3 control-label">Cantidad</label>
 
-								<div class="col-lg-10">
+								<div class="col-lg-9">
 									<input type="text" class="form-control" id="cantidad" placeholder="Cantidad">
 								</div>
 
@@ -55,9 +55,9 @@
 
 							<div class="form-group">
 
-								<label for="medicion" class="col-lg-2 control-label">Medicion</label>
+								<label for="medicion" class="col-lg-3 control-label">Medicion</label>
 
-								<div class="col-lg-10">
+								<div class="col-lg-9">
 									<input type="text" class="form-control" id="medicion" placeholder="medicion">
 								</div>
 
@@ -65,73 +65,74 @@
 
 							<div class="form-group">
 
-								<label for="input" class="col-lg-2 control-label">Precio</label>
+								<label for="input" class="col-lg-3 control-label">Precio</label>
 
-								<div class="col-lg-10">
+								<div class="col-lg-9">
 									<input type="text" class="form-control" id="precio" placeholder="Precio">
 								</div>
 
 							</div>
 
 							<div class="form-group">
-								<div class="col-lg-10 col-lg-offset-2">
+								<div class="col-lg-9 col-lg-offset-3">
 									<button type="submit" class="btn btn-primary">Agregar Producto</button>
 								</div>
 							</div>
 						</fieldset>
 					</form>
-					<hr>
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>Producto</th>
-								<th>Cantidad</th>
-								<th>Precio</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>harina</td>
-								<td>1 kg</td>
-								<td>$9.00</td>
-							</tr>
-						</tbody>
-						<tbody>
-							<tr>
-								<td>2</td>
-								<td>harina</td>
-								<td>1 kg</td>
-								<td>$9.00</td>
-							</tr>
-						</tbody>
-						<tbody>
-							<tr>
-								<td>3</td>
-								<td>harina</td>
-								<td>1 kg</td>
-								<td>$9.00</td>
-							</tr>
-						</tbody>
-						<tbody>
-							<tr>
-								<td>4</td>
-								<td>harina</td>
-								<td>1 kg</td>
-								<td>$9.00</td>
-							</tr>
-						</tbody>
-						<tbody>
-							<tr>
-								<td>5</td>
-								<td>harina</td>
-								<td>1 kg</td>
-								<td>$9.00</td>
-							</tr>
-						</tbody>
-					</table>
-
+					<div class="col-lg-8">
+						<h4>Estos son los ingredientes disponibles para crear tus recetas</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Producto</th>
+									<th>Cantidad</th>
+									<th>Precio</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>harina</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>2</td>
+									<td>harina</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>3</td>
+									<td>harina</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>4</td>
+									<td>harina</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>5</td>
+									<td>harina</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 			
@@ -144,15 +145,7 @@
 					<h3 class="panel-title">Nueva Receta</h3>
 				</div>
 				<div class="panel-body">
-					<p>
-					Nombre de la receta
-					ingredientes(ingrediente, medicion, cantidad)
-					agregar por ingrediente actualizando lista cada vez
-					receta base (receta ya existente [crear previamente])
-					
-					</p>
-		
-					
+										
 					<ul class="nav nav-tabs">
 						<li data-toggle="tab" class="active pull-left"><a href="#receta">Crear Receta</a></li>
 						<li data-toggle="tab" class=" pull-left"><a href="#base">Crear Receta Base</a></li>
@@ -161,7 +154,7 @@
 						<div id="receta" class="tab-pane fade in active">
 							<form class="form-horizontal">
 								<fieldset class="col-lg-4">
-									<legend>Agrega una nueva receta a tu recetario</legend>
+									<legend>Agrega un nuevo ingrediente a tu receta</legend>
 
 									<div class="form-group">
 																	
@@ -384,7 +377,114 @@
 					<h3 class="panel-title">Recetario</h3>
 				</div>
 				<div class="panel-body">
-					receta ....
+					<div class="col-lg-6">
+								
+						<h3>Recetas</h3>
+						<table class="table table-striped pull-left">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Receta</th>
+									<th>Cantidad</th>
+									<th>Precio</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>baguette</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>2</td>
+									<td>chapata</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>3</td>
+									<td>croissant</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>4</td>
+									<td>bigote</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>5</td>
+									<td>concha</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-lg-6">
+								
+						<h3>Recetas Base</h3>
+						<table class="table table-striped pull-left">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Receta</th>
+									<th>Cantidad</th>
+									<th>Precio</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>masa madre</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>2</td>
+									<td>poolish</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>3</td>
+									<td>costra</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>4</td>
+									<td>merengue italiano</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>5</td>
+									<td>merengue frances</td>
+									<td>1 kg</td>
+									<td>$9.00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
