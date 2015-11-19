@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Recetario</title>
@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body >
-	<div ng-app="myApp" ng-controller="myCtrl"  >
+	<div ng-controller="myCtrl"  >
 		<header class="navbar">
 
 			<ul class="nav nav-pills pull-right">
@@ -62,9 +62,20 @@
 										<select name="medicion" id="medicion1" ng-options="med for med in meds" ng-model="medicion1">
 											
 										</select>
+										
 									</div>
 
 								</div>
+
+								<div class="form-group" ng-show="medicion1 == 'pza' ">
+
+									<label for="pesopza" class="col-lg-4">Peso por pieza</label>
+
+									<div class="col-lg-8">
+										<input  ng-model='pesopza' type="text">
+									</div>
+
+								</div>		
 
 								<div class="form-group">
 
@@ -100,7 +111,7 @@
 										<td>{{materia.id}}</td>
 										<td>{{materia.materia}}</td>
 										<td>{{materia.cantidad + " " + materia.medicion}}</td>
-										<td>{{materia.precio}}</td>
+										<td>{{materia.precio | currency}}</td>
 									</tr>
 								</tbody ng-repeat-end >
 								
@@ -152,18 +163,7 @@
 												</div>
 
 											</div>
-											
-											<div class="form-group ">
-
-												<label for="medicion2" class="col-lg-3 control-label">Medicion</label>
-
-												<div class="col-lg-9">
-													<select name="medicion2" id="medicion2" ng-options="med for med in meds" ng-model="medicion2">
-														
-													</select>
-												</div>
-
-											</div>
+												
 											<div class="form-group">
 												<div class="col-lg-8 col-lg-offset-4">
 													<button id="agregarIngrediente" class="btn btn-primary">Agregar producto a la receta</button>
@@ -192,19 +192,40 @@
 									<table class="table table-striped pull-left">
 										<thead>
 											<tr>
-												
+												<th>Id</th>
 												<th>Producto</th>
 												<th>Cantidad</th>
 												<th>Precio</th>
 											</tr>
 										</thead>
 										<tbody >
-											{{receta}}
-											<tr ng-repeat="ingredientes in receta">
+											
+											<tr ng-repeat="ingredientes in receta.ingredientes">
+												<td>{{ingredientes.id}}</td>
 												<td>{{ingredientes.materia}}</td>
 												<td>{{ingredientes.cantidad + " " + ingredientes.medicion}}</td>
 												
-												<td>$9.00</td>
+												<td>{{ingredientes.precio | currency}}</td>
+											</tr>
+										</tbody>
+										
+									</table>
+								<table class="table table-striped pull-left">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Receta</th>
+												<th>Cantidad</th>
+												<th>Precio</th>
+											</tr>
+										</thead>
+										<tbody >
+											<tr>
+												<td>{{receta.id}}</td>
+												<td>{{receta.nombre}}</td>
+												<td>{{receta.cantidad + " gr"}}</td>
+												
+												<td>{{receta.costo | currency}}</td>
 											</tr>
 										</tbody>
 										
@@ -340,46 +361,16 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>1</td>
-										<td>baguette</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
-								</tbody>
-								<tbody>
-									<tr>
-										<td>2</td>
-										<td>chapata</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
-								</tbody>
-								<tbody>
-									<tr>
-										<td>3</td>
-										<td>croissant</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
-								</tbody>
-								<tbody>
-									<tr>
-										<td>4</td>
-										<td>bigote</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
-								</tbody>
-								<tbody>
-									<tr>
-										<td>5</td>
-										<td>concha</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
+									<tr ng-repeat="r in recetas">
+										<td>{{r.id}}</td>
+										<td>{{r.nombre}}</td>
+										<td>{{r.cantidad + " gr"}}</td>
+										<td>{{r.costo | currency}}</td>
+									</tr ng-repeat-end>
 								</tbody>
 							</table>
+								
+								
 						</div>
 						<div class="col-lg-6">
 									
@@ -401,38 +392,7 @@
 										<td>$9.00</td>
 									</tr>
 								</tbody>
-								<tbody>
-									<tr>
-										<td>2</td>
-										<td>poolish</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
-								</tbody>
-								<tbody>
-									<tr>
-										<td>3</td>
-										<td>costra</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
-								</tbody>
-								<tbody>
-									<tr>
-										<td>4</td>
-										<td>merengue italiano</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
-								</tbody>
-								<tbody>
-									<tr>
-										<td>5</td>
-										<td>merengue frances</td>
-										<td>1 kg</td>
-										<td>$9.00</td>
-									</tr>
-								</tbody>
+								
 							</table>
 						</div>
 					</div>
