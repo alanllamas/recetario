@@ -6,6 +6,12 @@ var express 	= require('express'),
 	router 		= express.Router();
 
 
+router
+	.use(bodyParser.json()).route('/').get(function () {
+		
+			res.redirect('/materias');
+	
+	});
 
 router
 	.use(bodyParser.json()).route('/materias')

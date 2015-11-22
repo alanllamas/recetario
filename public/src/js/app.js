@@ -1,6 +1,11 @@
 var app = angular.module('myApp', ['ngRoute','ngResource'])
 	.config(function ($routeProvider, $locationProvider) {
 		$routeProvider
+			.when('/', {
+				redirectTo: function(){
+					return '/materias'
+				}
+			})
 			.when('/materias',{
 				controller: 'MateriasController',
 				templateUrl: 'views/materiaprima.html'
