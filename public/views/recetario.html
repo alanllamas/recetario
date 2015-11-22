@@ -1,0 +1,56 @@
+<div id="recetario" >
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Recetario</h3>
+		</div>
+		<div class="panel-body">
+			<div class="col-lg-6">
+						
+				<h3>Recetas</h3>
+				<table class="table table-striped pull-left">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Receta</th>
+							<th>Cantidad</th>
+							<th>Precio</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="receta in recetas">
+							<td>1</td>
+							<td>{{receta.nombre}}</td>
+							<td>{{receta.receta}}</td>
+							<td>$9.00</td>
+						</tr>
+					</tbody>
+				</table>
+					
+					{{recetas}}
+			</div>
+			<div class="col-lg-6">
+						
+				<h3>Recetas Base</h3>
+				<table class="table table-striped pull-left">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Receta</th>
+							<th>Cantidad</th>
+							<th>Precio</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>masa madre</td>
+							<td>1 kg</td>
+							<td>$9.00</td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

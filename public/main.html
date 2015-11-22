@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Recetario</title>
+	<base href="/">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="src/css/simplex.css">
+	<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body >
+	<div ng-controller="myCtrl"  >
+		<header class="navbar">
+
+			<ul class="nav nav-pills pull-right">
+				<li ng-click="goNext('/materias')" data-toggle="pill" class="active pull-left"><a href="#materias">Materias Primas</a></li>
+				<li ng-click="goNext('/nuevareceta')" data-toggle="pill" class=" pull-left"><a href="#nuevareceta">Nueva Receta</a></li>
+				<li ng-click="goNext('/recetas')" data-toggle="pill" class=" pull-left"><a href="#recetario">Recetario</a></li>
+			</ul>
+		</header>
+
+		<div ng-view  id="mainContainer">
+
+		
+
+		</div>
+	</div>
+</body>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+
+<script src="src/js/app.js" ></script>
+
+</html>
